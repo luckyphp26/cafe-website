@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pastry-world-backend
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        sync: false      # You will set this manually in the Render dashboard
+      - key: PORT
+        value: 10000     # Render assigns its own port via $PORT; this is a fallback
