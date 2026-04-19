@@ -86,16 +86,7 @@ const SEED_REVIEWS = [
   },
 ];
 
-/* Avatar background palette for new reviews */
-const AVATAR_PALETTE = [
-  { bg: "#fef3c7", color: "#92400e" },
-  { bg: "#e0f2fe", color: "#0369a1" },
-  { bg: "#fce7f3", color: "#9d174d" },
-  { bg: "#d1fae5", color: "#065f46" },
-  { bg: "#ede9fe", color: "#5b21b6" },
-  { bg: "#fee2e2", color: "#991b1b" },
-  { bg: "#ecfdf5", color: "#047857" },
-];
+
 
 /* ── Star row component ─────────────────────────────────────────────── */
 function Stars({ rating, max = 5 }) {
@@ -234,7 +225,7 @@ function App() {
 
   /* Reviews state — loaded from MongoDB */
   const [reviews, setReviews]         = useState(SEED_REVIEWS);
-  const [reviewsLoading, setRevLoading] = useState(true);
+  const [, setRevLoading] = useState(true);
   const [showToast, setShowToast]     = useState(false);
 
   /* Load reviews from DB on mount */
@@ -538,34 +529,34 @@ function App() {
       <footer>
         <div className="section__container footer__container">
           <div className="footer__col">
-            <a href="#" className="footer__logo">
+            <a href="#home" className="footer__logo">
               <img src={logo} alt="Pastry World Logo" />
             </a>
           </div>
           <div className="footer__col">
             <h4>Blogs</h4>
             <ul className="footer__links">
-              <li><a href="#">Perfect Pastry</a></li>
-              <li><a href="#">Coffee &amp; Pastry</a></li>
-              <li><a href="#">Pastry Chefs</a></li>
+              <li><a href="/">Perfect Pastry</a></li>
+              <li><a href="/">Coffee &amp; Pastry</a></li>
+              <li><a href="/">Pastry Chefs</a></li>
             </ul>
           </div>
           <div className="footer__col">
             <h4>New Items</h4>
             <ul className="footer__links">
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Specials</a></li>
-              <li><a href="#">Customer Reviews</a></li>
-              <li><a href="#">Workshops</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#menu">Specials</a></li>
+              <li><a href="#reviews">Customer Reviews</a></li>
+              <li><a href="#home">Workshops</a></li>
             </ul>
           </div>
           <div className="footer__col">
             <h4>Social Media</h4>
             <ul className="footer__links">
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">YouTube</a></li>
-              <li><a href="#">LinkedIn</a></li>
+              <li><a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a></li>
+              <li><a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a></li>
+              <li><a href="https://youtube.com" target="_blank" rel="noreferrer">YouTube</a></li>
+              <li><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
             </ul>
           </div>
         </div>
