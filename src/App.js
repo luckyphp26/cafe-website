@@ -10,7 +10,7 @@ import menu4 from './assets/menu-4.jpg';
 import bookImg from './assets/book.jpg';
 import headerBg from './assets/header-bg.jpg';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = process.env.REACT_APP_API_URL || 'https://cafe-websitepastry-world-backend.onrender.com/api';
 
 /* ── Seed reviews ─────────────────────────────────────────────────────── */
 const SEED_REVIEWS = [
